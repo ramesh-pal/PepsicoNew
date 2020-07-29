@@ -1,0 +1,16 @@
+ID: test09
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: testdbmodule09
+   type: hdb
+   path: testdbmodule09
+   requires:
+    - name: hdi_testdbmodule09
+
+resources:
+ - name: hdi_testdbmodule09
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
